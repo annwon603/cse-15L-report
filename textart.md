@@ -2,7 +2,8 @@
 **1**
 # CSE-15L
 ## Lab
-[Promo](https://annwon603.github.io/)
+[Promo](https://annwon603.github.io/) <br>
+![Image](https://pbs.twimg.com/media/F4RcHVMXgAAC3Kv.jpg:large)
 --
 > Thursday
 * 4pm
