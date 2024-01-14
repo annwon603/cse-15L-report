@@ -39,27 +39,27 @@ The reason why it shows an error in my output is because the java file is not a 
 
 # LS Commands 
 
-**1. Command with no argument**
-    ```
-    [user@sahara ~]$ls
-    hello.txt lecture1  //output
-    [user@sahara ~]$pwd
-    /home
-
-    ```
-    The reason I got that output because it listed the files and directories it found in the current working<br>
-    directory which is the \home
+**1. Command with no argument** <br>
+```
+[user@sahara ~]  $ls
+hello.txt lecture1  //output
+[user@sahara ~]$pwd
+/home
+```
+The reason I got that output because it listed the files and directories it found in the current working<br>
+directory which is the \home
     
-**2. Command with a path to a *directory* as an argument**
-    ```
-    [user@sahara ~]$ ls lecture1
-    Hello.class  Hello.java  messages  README   //output
-    [user@sahara ~]$pwd
-    /home
-    ```
-    The reason why I got that output is because it listed the files and directories inside the lecture1 folders.
+**2. Command with a path to a *directory* as an argument** 
+```
+[user@sahara ~]$ ls lecture1
+Hello.class  Hello.java  messages  README   //output
+[user@sahara ~]$pwd
+/home
+ ```
+The reason why I got that output is because it listed the files and directories inside the lecture1 folders.
    
 **3. Command with a path to a *file* as an argument**
+
    ```
    [user@sahara ~]$ ls lecture1/Hello.java
    lecture1/Hello.java //output
@@ -73,10 +73,13 @@ The reason why it shows an error in my output is because the java file is not a 
 
 **1. Command with *no* arguments**
     ![Image](screenshots/cat1.PNG)
-<br> The reason why I got that output is because the cat command is reading the user input and then outputing it
+<br> The reason why I got that output is because the cat command is reading the user input and then outputing it <br>
+
+
 **2. Command with a path to a *directory* as an argument**  <br>
     ![Image](screenshots/cat2.PNG)
 <br> The reason why I got that output is because they're both directories <br>
+
 **3. Command with a path to a *file* as an argument**
     ![Image](screenshots/cat3.PNG)
 <br> The reason why I got that output is because it's reading what's written inside that file.
