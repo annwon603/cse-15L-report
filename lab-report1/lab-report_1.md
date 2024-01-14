@@ -73,8 +73,11 @@ The reason why it shows an error in my output is because the java file is not a 
 
 **1. Command with *no* arguments**
     ![Image](screenshots/cat1.PNG)
-**2. Command with a path to a *directory* as an argument**
+<br> The reason why I got that output is because the cat command is reading the user input and then outputing it
+**2. Command with a path to a *directory* as an argument**  <br>
     ![Image](screenshots/cat2.PNG)
+<br> The reason why I got that output is because they're both directories <br>
 **3. Command with a path to a *file* as an argument**
     ![Image](screenshots/cat3.PNG)
+<br> The reason why I got that output is because it's reading what's written inside that file.
    
