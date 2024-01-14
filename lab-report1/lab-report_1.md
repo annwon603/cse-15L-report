@@ -67,7 +67,9 @@ The reason why I got that output is because it listed the files and directories 
    /home
 
    ```
-   The reason why I got that output is because it listed the path the files is located in
+   The reason why I got that output is because it listed the path the files is located in <br>
+
+<br>
 
 # CAT Commands
 
