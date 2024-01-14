@@ -47,7 +47,7 @@ hello.txt lecture1  //output
 /home
 ```
 The reason I got that output because it listed the files and directories it found in the current working<br>
-directory which is the \home
+directory which is the /home
     
 **2. Command with a path to a *directory* as an argument** 
 ```
