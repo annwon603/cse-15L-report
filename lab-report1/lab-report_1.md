@@ -72,7 +72,7 @@ The reason why it shows an error in my output is because the java file is not a 
 # CAT Commands
 
 **1. Command with *no* arguments**
-
+    ![Image](screenshots/cat1.PNG)
 **2. Command with a path to a *directory* as an argument**
 
 **3. Command with a path to a *file* as an argument**
