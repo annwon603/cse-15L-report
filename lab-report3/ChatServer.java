@@ -2,7 +2,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.*;
 class Handler implements URLHandler{
-    // ArrayList<String> text = new ArrayList<String>();  //Should store user and message thus size is 2
     ArrayList<String> message = new ArrayList<String>();
     ArrayList<String> user = new ArrayList<String>();
     public String handleRequest(URI url){
@@ -12,7 +11,7 @@ class Handler implements URLHandler{
             }else{
 
                 StringBuilder result = new StringBuilder();
-                
+                //iterating through the messages
                 for(int i = 0; i< message.size()-1; i++){
                     result.append(user.get(i)).append(" : ").append(message.get(i)).append("\n");
                 }
