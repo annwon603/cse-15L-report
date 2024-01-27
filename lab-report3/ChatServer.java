@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.*;
 class Handler implements URLHandler{
+    // ArrayList<String> text = new ArrayList<String>();  //Should store user and message thus size is 2
     ArrayList<String> message = new ArrayList<String>();
     ArrayList<String> user = new ArrayList<String>();
     public String handleRequest(URI url){
@@ -11,30 +12,22 @@ class Handler implements URLHandler{
             }else{
 
                 StringBuilder result = new StringBuilder();
-                //iterate through every message and users
-                for(int i = 0; i< message.size(); i++){
-                    // User : Message /n
+                
+                for(int i = 0; i< message.size()-1; i++){
                     result.append(user.get(i)).append(" : ").append(message.get(i)).append("\n");
-
                 }
-
                 return result.toString();
             }
         }else{
             if(url.getPath().contains("/add-message")){
-                //string contains the query after the ?
-                String query = url.getQuery(); 
-                //splits the message and user
-                String[] parameters = query.split("&"); 
-                //iterate through the two elements in parameters[]
-                for (String words : parameters) { 
+                String query = url.getQuery(); //string contains the query after the ?
+                String[] parameters = query.split("&"); //splits the message and user
+                for (String words : parameters) { //iterate through the two elements in parameters[]
                     String[] userInput = words.split("=");
-                    //words inputed after s
-                    if (userInput[0].equals("s")) { 
+                    if (userInput[0].equals("s")) { //words inputed after s
                         message.add(userInput[1]);
                     } else {
-                        //words inputed after user
-                        if (userInput[0].equals("user")){ 
+                        if (userInput[0].equals("user")){ //words inputed after user
                             user.add(userInput[1]);
                         }
                     }
