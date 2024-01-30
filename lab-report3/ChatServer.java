@@ -12,7 +12,7 @@ class Handler implements URLHandler{
 
                 StringBuilder result = new StringBuilder();
                 //iterating through the messages
-                for(int i = 0; i< message.size()-1; i++){
+                for(int i = 0; i< message.size(); i++){
                     result.append(user.get(i)).append(" : ").append(message.get(i)).append("\n");
                 }
                 return result.toString();
