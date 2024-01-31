@@ -76,4 +76,4 @@ class ChatServer {
 
 # Part 3
 
-I didn't know that I could see all the files I downloaded in my download folder. I also didn't know that Java is capable of making a website server because I thought only JavaScript or any front-end/back-end languages could do that. I think it was cool that we could connect to the CSE computers and have access to our data. I wonder if it only works if we're in UCSD or somewhere else. 
+I didn't know that I could see all the files I downloaded in my download folder. I noticed that my public and private key are the same because my key was a private key at first then turned into a public key. I also didn't know that Java is capable of making a website server because I thought only JavaScript or any front-end/back-end languages could do that. I think it was cool that we could connect to the CSE computers and have access to our data. I wonder if it only works if we're in UCSD or somewhere else. 
