@@ -20,7 +20,7 @@ class Handler implements URLHandler{
         }else{
             if(url.getPath().contains("/add-message")){
                 String query = url.getQuery(); //string contains the query after the ?
-                String[] parameters = query.split("&"); //splits the message and user
+                String[] parameters = url.getQuery().split("&"); //splits the message and user
                 for (String words : parameters) { //iterate through the two elements in parameters[]
                     String[] userInput = words.split("=");
                     if (userInput[0].equals("s")) { //words inputed after s
