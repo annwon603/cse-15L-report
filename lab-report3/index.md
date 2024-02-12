@@ -68,7 +68,7 @@ To prevent the original element from disappearing, I made a temp array to contai
 
 I will be researching four different command-line options for `find`
 
-1. `find -name`:This command is useful because it helps find the name of a specific file or a specific type of file. Then it prints it out which file
+1. `find -name`:This command is useful because it helps find the name of a specific file or a specific type of file. The command then prints out which file.
 
 Example 1: 
 
@@ -110,7 +110,7 @@ Output
 //all the txt file found in the technical directory
 ```
 
-2. `find -link`: This command is useful because it helps detect which file has *n* links. Then it prints it out which file
+2. `find -link`: This command is useful because it helps detect which file has *n* links. Then the command prints out which file.
 
 Example 1:
 ```
@@ -156,7 +156,7 @@ Output
 ./911report
 ```
 
-3. `find -type` : This command is useful because it can find what type of files is available. Then it prints it out. According
+3. `find -type` : This command is useful because it can find what type of files is available. Then the command prints it out. According
 to `man find`, the argument after -type is 'b', 'c', 'd', 'l', 'p', 'f', or 's' for block special file, character special file, directory, symbolic link, FIFO, regular file, or socket, respectively.
 
 Example 1:
@@ -201,7 +201,7 @@ Output
 //listed all regular files which are .txt files
 ```
 
-4. `find -newer`: this command is useful because it can the files that are modify more than a file you put in as an argument. This command then prints out the files that it find
+4. `find -newer`: this command is useful because it can find the files that are modified more than a file you put in as an argument. This command then prints out the files that it finds.
 
 Example 1
 ```
