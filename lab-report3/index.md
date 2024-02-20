@@ -58,10 +58,10 @@ Here is the bug (no longer a bug) after the fix
   }
 ```
 
-The fix I made to the bug fixed the issue my test found when testing if input2 would change from {2,3} to {3,2} if called 
-the reverseInPlace method.
-How the bug caused that symptom is when input2 went through its first iteration, it was changed to {3,3}. Then in the second iteration, element 2 is no longer there because of the first iteration, resulting in the final array of being {3,3}. 
-To prevent the original element from disappearing, I made a temp array to contain those elements and used it to directly modify int[] arr. 
+The fix I made to the bug fixed the issue my test found when testing if `input2` would change from `{2,3}` to `{3,2}` if called 
+the `reverseInPlace` method.
+How the bug caused that symptom is when `input2` went through its first iteration, it was changed to `{3,3}`. Then in the second iteration, element `2` is no longer there because of the first iteration, resulting in the final array of being `{3,3}`. 
+To prevent the original element from disappearing, I made a `tempArray` to contain those elements and used it to directly modify `int[] arr`. 
 
 
 # Part 2 Researching Commands
