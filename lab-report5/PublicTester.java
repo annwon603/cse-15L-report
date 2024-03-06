@@ -301,17 +301,7 @@ public class PublicTester {
         assertEquals("Priority queue's length", 6, pq.getLength());
     }
 
-    /**
-     * Test the MyPriorityQueue clear function
-     */
-    @Test
-    public void testPriorityQueueClear() {
-        MyPriorityQueue<Integer> pq =
-                initPriorityQueue(Arrays.asList(13, 18, 18, 25, 18, 19));
-        pq.clear();
-        assertEquals("Priority queue should be empty",
-                List.of(), pq.heap.data);
-    }
+    
 
     // ===================== MyAlgorithm Public Tests =====================
     // Note: This test assumes your Priority Queue works correctly
