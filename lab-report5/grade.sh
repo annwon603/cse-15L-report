@@ -9,7 +9,7 @@ NUMOFTESTRUN=$(grep -Eo "Tests run: [0-9]+" output | grep -Eo "[0-9]+")
 
 NUMFAIL=$(grep -Eo "Failures: [0-9]+" output | grep -Eo "[0-9]+")
 
-let NUMSUCCESS=$NUMOFTESTRUN-$NUMFAIL
+let NUMSUCCESS=$(($NUMOFTESTRUN-$NUMFAIL))
 
 OK=$(grep OK output)
 if [[ $OK = "" ]]
