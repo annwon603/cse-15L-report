@@ -1,0 +1,57 @@
+JUnit version 4.13.2
+..E...E...E..E...E..E...E....E.
+Time: 0.014
+There were 8 failures:
+1) testMinHeapDeleteIndex(PublicTester)
+java.lang.AssertionError: Heap is properly updated after deleting index. expected:<[D, E, D, G, Z, X]> but was:<[G, G, D, G, Z, X]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapDeleteIndex(PublicTester.java:152)
+2) testLastAtom(PublicTester)
+java.lang.AssertionError: Reactions should be stable -> unstable -> unstable expected:<4> but was:<1>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testLastAtom(PublicTester.java:316)
+3) testMinHeapSwap(PublicTester)
+java.lang.AssertionError: expected:<[1, 3, 2]> but was:<[1, 1, 2]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at PublicTester.testMinHeapSwap(PublicTester.java:75)
+4) testMinHeapPercolateDown(PublicTester)
+java.lang.AssertionError: Heap is properly updated after percolating down. expected:<[3, 4, 8, 5, 2]> but was:<[8, 8, 8, 5, 8]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapPercolateDown(PublicTester.java:140)
+5) testMinHeapConstructorDataList(PublicTester)
+java.lang.AssertionError: MinHeap properties should be followed expected:<[1, 2, 5, 3, 4, 9, 6, 7]> but was:<[5, 5, 5, 7, 5, 9, 6, 7]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapConstructorDataList(PublicTester.java:64)
+6) testMinHeapPercolateUp(PublicTester)
+java.lang.AssertionError: Heap is properly updated after percolating up. expected:<[1, 2, 4, 4, 2]> but was:<[1, 2, 4, 2, 2]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapPercolateUp(PublicTester.java:129)
+7) testMinHeapInsert(PublicTester)
+java.lang.AssertionError: Heap is properly updated after deleting index. expected:<[11, 11, 13, 12]> but was:<[11, 11, 13, 11]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapInsert(PublicTester.java:163)
+8) testMinHeapRemove(PublicTester)
+java.lang.AssertionError: Heap after removing one element. expected:<[18, 18, 18, 25, 19]> but was:<[19, 19, 19, 25, 19]>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at PublicTester.testMinHeapRemove(PublicTester.java:184)
+
+FAILURES!!!
+Tests run: 23,  Failures: 8
+

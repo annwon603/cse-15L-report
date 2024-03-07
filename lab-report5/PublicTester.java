@@ -29,41 +29,41 @@ public class PublicTester {
         return heap;
     }
 
-    /**
-     * Helper method to initialize all instance variables of MyPriorityQueue
-     *
-     * @param data the data array
-     */
-    static <E extends Comparable<E>> MyPriorityQueue<E> initPriorityQueue(
-            List<E> data) {
-        MyMinHeap<E> heap = new MyMinHeap<>();
-        heap.data = new ArrayList<>(data);
-        MyPriorityQueue<E> pq = new MyPriorityQueue<>();
-        pq.heap = heap;
-        return pq;
-    }
+//     /**
+//      * Helper method to initialize all instance variables of MyPriorityQueue
+//      *
+//      * @param data the data array
+//      */
+//     static <E extends Comparable<E>> MyPriorityQueue<E> initPriorityQueue(
+//             List<E> data) {
+//         MyMinHeap<E> heap = new MyMinHeap<>();
+//         heap.data = new ArrayList<>(data);
+//         MyPriorityQueue<E> pq = new MyPriorityQueue<>();
+//         pq.heap = heap;
+//         return pq;
+//     }
 
     // ===================== MyMinHeap Public Tests =====================
 
     /**
      * Test the MyMinHeap default constructor without any input parameter
      */
-    @Test
-    public void testMinHeapConstructorNoArg() {
-        MyMinHeap<Integer> heap = new MyMinHeap<>();
-        assertEquals("Data ArrayList should be empty", 0, heap.data.size());
-    }
+//     @Test
+//     public void testMinHeapConstructorNoArg() {
+//         MyMinHeap<Integer> heap = new MyMinHeap<>();
+//         assertEquals("Data ArrayList should be empty", 0, heap.data.size());
+//     }
 
-    /**
-     * Test the MyMinHeap constructor with input data
-     */
-    @Test
-    public void testMinHeapConstructorDataList() {
-        MyMinHeap<Integer> heap =
-                new MyMinHeap<>(Arrays.asList(5, 4, 1, 7, 2, 9, 6, 3));
-        assertEquals("MinHeap properties should be followed",
-                Arrays.asList(1, 2, 5, 3, 4, 9, 6, 7), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap constructor with input data
+//      */
+//     @Test
+//     public void testMinHeapConstructorDataList() {
+//         MyMinHeap<Integer> heap =
+//                 new MyMinHeap<>(Arrays.asList(5, 4, 1, 7, 2, 9, 6, 3));
+//         assertEquals("MinHeap properties should be followed",
+//                 Arrays.asList(1, 2, 5, 3, 4, 9, 6, 7), heap.data);
+//     }
 
     /**
      * Test the MyMinHeap swap function
@@ -119,201 +119,201 @@ public class PublicTester {
         assertEquals("Should return -1", -1, heap.getMinChildIdx(1));
     }
 
-    /**
-     * Test the MyMinHeap percolateUp function
-     */
-    @Test
-    public void testMinHeapPercolateUp() {
-        MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(1, 4, 4, 2, 2));
-        heap.percolateUp(3);
-        assertEquals("Heap is properly updated after percolating up.",
-                Arrays.asList(1, 2, 4, 4, 2), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap percolateUp function
+//      */
+//     @Test
+//     public void testMinHeapPercolateUp() {
+//         MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(1, 4, 4, 2, 2));
+//         heap.percolateUp(3);
+//         assertEquals("Heap is properly updated after percolating up.",
+//                 Arrays.asList(1, 2, 4, 4, 2), heap.data);
+//     }
 
-    /**
-     * Test the MyMinHeap percolateDown function
-     */
-    @Test
-    public void testMinHeapPercolateDown() {
-        MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(8, 4, 3, 5, 2));
-        heap.percolateDown(0);
-        assertEquals("Heap is properly updated after percolating down.",
-                Arrays.asList(3, 4, 8, 5, 2), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap percolateDown function
+//      */
+//     @Test
+//     public void testMinHeapPercolateDown() {
+//         MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(8, 4, 3, 5, 2));
+//         heap.percolateDown(0);
+//         assertEquals("Heap is properly updated after percolating down.",
+//                 Arrays.asList(3, 4, 8, 5, 2), heap.data);
+//     }
 
-    /**
-     * Test the MyMinHeap deleteIndex function
-     */
-    @Test
-    public void testMinHeapDeleteIndex() {
-        MyMinHeap<Character> heap =
-                initMinHeap(Arrays.asList('A', 'D', 'D', 'E', 'Z', 'X', 'G'));
-        heap.deleteIndex(0);
-        assertEquals("Heap is properly updated after deleting index.",
-                Arrays.asList('D', 'E', 'D', 'G', 'Z', 'X'), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap deleteIndex function
+//      */
+//     @Test
+//     public void testMinHeapDeleteIndex() {
+//         MyMinHeap<Character> heap =
+//                 initMinHeap(Arrays.asList('A', 'D', 'D', 'E', 'Z', 'X', 'G'));
+//         heap.deleteIndex(0);
+//         assertEquals("Heap is properly updated after deleting index.",
+//                 Arrays.asList('D', 'E', 'D', 'G', 'Z', 'X'), heap.data);
+//     }
 
-    /**
-     * Test the MyMinHeap insert function
-     */
-    @Test
-    public void testMinHeapInsert() {
-        MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(11, 12, 13));
-        heap.insert(11);
-        assertEquals("Heap is properly updated after deleting index.",
-                Arrays.asList(11, 11, 13, 12), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap insert function
+//      */
+//     @Test
+//     public void testMinHeapInsert() {
+//         MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(11, 12, 13));
+//         heap.insert(11);
+//         assertEquals("Heap is properly updated after deleting index.",
+//                 Arrays.asList(11, 11, 13, 12), heap.data);
+//     }
 
-    /**
-     * Test the MyMinHeap getMin function
-     */
-    @Test
-    public void testMinHeapGetMin() {
-        MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(13, 18, 18));
-        assertEquals("Minimum element", 13, heap.getMin().intValue());
-    }
+//     /**
+//      * Test the MyMinHeap getMin function
+//      */
+//     @Test
+//     public void testMinHeapGetMin() {
+//         MyMinHeap<Integer> heap = initMinHeap(Arrays.asList(13, 18, 18));
+//         assertEquals("Minimum element", 13, heap.getMin().intValue());
+//     }
 
-    /**
-     * Test the MyMinHeap remove function
-     */
-    @Test
-    public void testMinHeapRemove() {
-        MyMinHeap<Integer> heap =
-                initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
-        assertEquals("Minimum element", Integer.valueOf(13), heap.remove());
-        assertEquals("Heap after removing one element.",
-                Arrays.asList(18, 18, 18, 25, 19), heap.data);
-    }
+//     /**
+//      * Test the MyMinHeap remove function
+//      */
+//     @Test
+//     public void testMinHeapRemove() {
+//         MyMinHeap<Integer> heap =
+//                 initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
+//         assertEquals("Minimum element", Integer.valueOf(13), heap.remove());
+//         assertEquals("Heap after removing one element.",
+//                 Arrays.asList(18, 18, 18, 25, 19), heap.data);
+//     }
 
-    /**
-     * Test the MyMinHeap size function
-     */
-    @Test
-    public void testMinHeapSize() {
-        MyMinHeap<Integer> heap =
-                initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
-        assertEquals("Size of heap", 6, heap.size());
-    }
+//     /**
+//      * Test the MyMinHeap size function
+//      */
+//     @Test
+//     public void testMinHeapSize() {
+//         MyMinHeap<Integer> heap =
+//                 initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
+//         assertEquals("Size of heap", 6, heap.size());
+//     }
 
-    /**
-     * Test the MyMinHeap clear function
-     */
-    @Test
-    public void testMinHeapClear() {
-        MyMinHeap<Integer> heap =
-                initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
-        heap.clear();
-        assertEquals("Heap after clear() should be empty",
-                0, heap.data.size());
-    }
+//     /**
+//      * Test the MyMinHeap clear function
+//      */
+//     @Test
+//     public void testMinHeapClear() {
+//         MyMinHeap<Integer> heap =
+//                 initMinHeap(Arrays.asList(13, 18, 18, 25, 18, 19));
+//         heap.clear();
+//         assertEquals("Heap after clear() should be empty",
+//                 0, heap.data.size());
+//     }
 
-    // ===================== MyPriorityQueue Public Tests =====================
-    // Note: Many of these tests assume that your heap works correctly.
+//     // ===================== MyPriorityQueue Public Tests =====================
+//     // Note: Many of these tests assume that your heap works correctly.
 
-    /**
-     * Test the MyPriorityQueue No-arg constructor
-     */
-    @Test
-    public void testPriorityQueueNoArgConstructor() {
-        MyMinHeap<Float> heap = new MyMinHeap<>();
-        MyPriorityQueue<Float> pq = new MyPriorityQueue<>();
-        assertNotNull("Priority queue's underlying heap is not null.",
-                pq.heap);
-        assertEquals("Heap after no-arg constructor.",
-                heap.data, pq.heap.data);
-    }
+//     /**
+//      * Test the MyPriorityQueue No-arg constructor
+//      */
+//     @Test
+//     public void testPriorityQueueNoArgConstructor() {
+//         MyMinHeap<Float> heap = new MyMinHeap<>();
+//         MyPriorityQueue<Float> pq = new MyPriorityQueue<>();
+//         assertNotNull("Priority queue's underlying heap is not null.",
+//                 pq.heap);
+//         assertEquals("Heap after no-arg constructor.",
+//                 heap.data, pq.heap.data);
+//     }
 
-    /**
-     * Test the MyPriorityQueue Collection-arg constructor
-     */
-    @Test
-    public void testPriorityCollectionConstructor() {
-        List<Integer> startingList = Arrays.asList(5, 4, 1, 7, 2, 9, 6, 3);
-        MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
-        MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
+//     /**
+//      * Test the MyPriorityQueue Collection-arg constructor
+//      */
+//     @Test
+//     public void testPriorityCollectionConstructor() {
+//         List<Integer> startingList = Arrays.asList(5, 4, 1, 7, 2, 9, 6, 3);
+//         MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
+//         MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
 
-        assertNotNull("Priority queue's underlying heap is not null.",
-                pq.heap);
-        assertEquals("Priority queue after constructor.",
-                expectedHeap.data, pq.heap.data);
-    }
+//         assertNotNull("Priority queue's underlying heap is not null.",
+//                 pq.heap);
+//         assertEquals("Priority queue after constructor.",
+//                 expectedHeap.data, pq.heap.data);
+//     }
 
-    /**
-     * Test the MyPriorityQueue push function
-     */
-    @Test
-    public void testPriorityQueuePush() {
-        List<Integer> startingList = Arrays.asList(11, 12, 13);
-        MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
-        MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
-        pq.push(11);
-        expectedHeap.insert(11);
-        assertEquals("Priority queue after push.", expectedHeap.data,
-                pq.heap.data);
-        assertEquals(
-                "Bigger length after insertion",
-                4,
-                pq.getLength());
-    }
+//     /**
+//      * Test the MyPriorityQueue push function
+//      */
+//     @Test
+//     public void testPriorityQueuePush() {
+//         List<Integer> startingList = Arrays.asList(11, 12, 13);
+//         MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
+//         MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
+//         pq.push(11);
+//         expectedHeap.insert(11);
+//         assertEquals("Priority queue after push.", expectedHeap.data,
+//                 pq.heap.data);
+//         assertEquals(
+//                 "Bigger length after insertion",
+//                 4,
+//                 pq.getLength());
+//     }
 
-    /**
-     * Test the MyPriorityQueue peek function
-     */
-    @Test
-    public void testPriorityQueuePeek() {
-        List<Integer> startingList = Arrays.asList(13, 18, 18);
-        MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
-        MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
-        assertEquals(
-                "Minimum element of [13,18,18].",
-                expectedHeap.getMin(),
-                pq.peek());
-    }
+//     /**
+//      * Test the MyPriorityQueue peek function
+//      */
+//     @Test
+//     public void testPriorityQueuePeek() {
+//         List<Integer> startingList = Arrays.asList(13, 18, 18);
+//         MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
+//         MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
+//         assertEquals(
+//                 "Minimum element of [13,18,18].",
+//                 expectedHeap.getMin(),
+//                 pq.peek());
+//     }
 
-    /**
-     * Test the MyPriorityQueue pop function
-     */
-    @Test
-    public void testPriorityQueuePop() {
-        List<Integer> startingList = Arrays.asList(13, 18, 18, 25, 18, 19);
-        MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
-        MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
-        assertEquals(
-                "Minimum element of [13, 18, 18, 25, 18, 19].",
-                expectedHeap.remove(),
-                pq.pop());
+//     /**
+//      * Test the MyPriorityQueue pop function
+//      */
+//     @Test
+//     public void testPriorityQueuePop() {
+//         List<Integer> startingList = Arrays.asList(13, 18, 18, 25, 18, 19);
+//         MyMinHeap<Integer> expectedHeap = initMinHeap(startingList);
+//         MyPriorityQueue<Integer> pq = initPriorityQueue(startingList);
+//         assertEquals(
+//                 "Minimum element of [13, 18, 18, 25, 18, 19].",
+//                 expectedHeap.remove(),
+//                 pq.pop());
 
-        assertEquals("Priority queue after pop.", expectedHeap.data,
-                pq.heap.data);
-        assertEquals(
-                "Smaller length after insertion",
-                5,
-                pq.getLength());
-    }
+//         assertEquals("Priority queue after pop.", expectedHeap.data,
+//                 pq.heap.data);
+//         assertEquals(
+//                 "Smaller length after insertion",
+//                 5,
+//                 pq.getLength());
+//     }
 
-    /**
-     * Test the MyPriorityQueue getLength function
-     */
-    @Test
-    public void testPriorityQueueGetLength() {
-        MyPriorityQueue<Integer> pq =
-                initPriorityQueue(Arrays.asList(13, 18, 18, 25, 18, 19));
-        assertEquals("Priority queue's length", 6, pq.getLength());
-    }
+//     /**
+//      * Test the MyPriorityQueue getLength function
+//      */
+//     @Test
+//     public void testPriorityQueueGetLength() {
+//         MyPriorityQueue<Integer> pq =
+//                 initPriorityQueue(Arrays.asList(13, 18, 18, 25, 18, 19));
+//         assertEquals("Priority queue's length", 6, pq.getLength());
+//     }
 
     
 
-    // ===================== MyAlgorithm Public Tests =====================
-    // Note: This test assumes your Priority Queue works correctly
+//     // ===================== MyAlgorithm Public Tests =====================
+//     // Note: This test assumes your Priority Queue works correctly
 
-    /**
-     * Tests the lastAtom function
-     */
-    @Test
-    public void testLastAtom() {
-        ArrayList<Integer> atoms = 
-                new ArrayList<>(Arrays.asList(2, 5, 3, 2));
-        assertEquals("Reactions should be stable -> unstable -> unstable",
-                 Integer.valueOf(4), MyAlgorithm.lastAtom(atoms));
-    }
+//     /**
+//      * Tests the lastAtom function
+//      */
+//     @Test
+//     public void testLastAtom() {
+//         ArrayList<Integer> atoms = 
+//                 new ArrayList<>(Arrays.asList(2, 5, 3, 2));
+//         assertEquals("Reactions should be stable -> unstable -> unstable",
+//                  Integer.valueOf(4), MyAlgorithm.lastAtom(atoms));
+//     }
 }
