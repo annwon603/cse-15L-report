@@ -61,9 +61,8 @@ public class MyMinHeap<E extends Comparable<E>> implements MinHeapInterface<E> {
      * @param to lower range index
      */
     protected void swap(int from, int to){
-        E temp = data.get(from);
         data.set(from, data.get(to));
-        data.set(to, temp);
+        data.set(to, data.get(from));
     }
 
     /**
